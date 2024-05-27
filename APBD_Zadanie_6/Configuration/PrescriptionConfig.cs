@@ -8,6 +8,12 @@ public class PrescriptionConfig : IEntityTypeConfiguration<Prescription>
 {
     public void Configure(EntityTypeBuilder<Prescription> builder)
     {
-        throw new NotImplementedException();
+        builder.HasKey(e => e.IdPrescription).HasName("IdPrescription_PK");
+        builder.Property(e => e.IdPrescription).UseIdentityColumn();
+
+        builder.Property(e => e.Date).IsRequired();
+        builder.Property(e => e.DueDate).IsRequired();
+    
+//        [...]
     }
 }
