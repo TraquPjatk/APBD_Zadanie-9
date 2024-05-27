@@ -10,7 +10,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddDbContext<Context>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("sXXXXX"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("s19787"));
 });
 
 
